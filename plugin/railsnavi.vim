@@ -86,7 +86,7 @@ function! GetSpecNameForFile()
     let file = GetSpecForFile(file)
   endif
   
-  return file
+  exec ':Dispath rspec '. file
 endfunction
 
 fun! OpenFolderWithDirvish(folder)
