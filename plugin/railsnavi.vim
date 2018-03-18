@@ -80,13 +80,13 @@ function! RunSpecForFile()
   exec '!rspec ' . file
 endfunction
 
-function! GetSpecNameForFile()
+function! RunSpecDispatchForFile()
   let file = GetCurrentFile()
   if IsCompatibleForSpec(file)
     let file = GetSpecForFile(file)
   endif
   
-  exec ':Dispath rspec '. file
+  exec ':Dispatch rspec '. file
 endfunction
 
 fun! OpenFolderWithDirvish(folder)
